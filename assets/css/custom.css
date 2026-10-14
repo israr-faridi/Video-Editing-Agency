@@ -141,7 +141,7 @@ ul {
 .hero-section {
   position: relative;
   background-image:
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 60px);
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 60px);
   overflow: hidden;
   padding-bottom: 40px;
 }
@@ -155,7 +155,7 @@ ul {
   transform: translateX(-50%);
   width: min(900px, 100%);
   height: 760px;
-  background: radial-gradient(circle, rgba(255,94,46,0.55) 0%, rgba(255,94,46,0.18) 35%, rgba(255,94,46,0) 70%);
+  background: radial-gradient(circle, rgba(255, 94, 46, 0.55) 0%, rgba(255, 94, 46, 0.18) 35%, rgba(255, 94, 46, 0) 70%);
   filter: blur(10px);
   pointer-events: none;
   z-index: 0;
@@ -217,15 +217,15 @@ ul {
 }
 
 .navbar-brand {
-  color: #fff;
-  font-weight: 600;
-  font-size: 18px;
+  width: 100px;
+
 }
 
-.navbar-brand i {
-  font-size: 22px;
-  color: var(--orange);
+.navbar-brand img {
+  width: 100%;
+  /* filter: invert(1); */
 }
+
 
 .hero-nav-links {
   gap: 4px;
@@ -256,6 +256,7 @@ ul {
 }
 
 .hero-title {
+  text-transform: capitalize;
   font-size: 52px;
   font-weight: 700;
   line-height: 1.2;
@@ -302,13 +303,21 @@ ul {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
-.hero-swiper .swiper-slide img {
+.hero-swiper .swiper-slide video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 16px;
 }
+
+/* .hero-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+} */
 
 /* ================= PROBLEM SECTION ================= */
 .problem-section {
@@ -500,9 +509,17 @@ ul {
 }
 
 @keyframes dotPulse {
-  0% { filter: drop-shadow(0 0 0 rgba(255, 94, 46, 0.6)); }
-  70% { filter: drop-shadow(0 0 6px rgba(255, 94, 46, 0)); }
-  100% { filter: drop-shadow(0 0 0 rgba(255, 94, 46, 0)); }
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 94, 46, 0.6));
+  }
+
+  70% {
+    filter: drop-shadow(0 0 6px rgba(255, 94, 46, 0));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 94, 46, 0));
+  }
 }
 
 .chart-months {
@@ -564,7 +581,9 @@ ul {
 }
 
 @keyframes ringSpin {
-  to { transform: rotate(270deg); }
+  to {
+    transform: rotate(270deg);
+  }
 }
 
 .ring-track {
@@ -608,8 +627,15 @@ ul {
 }
 
 @keyframes playPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 94, 46, 0.35); }
-  50% { box-shadow: 0 0 0 10px rgba(255, 94, 46, 0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 94, 46, 0.35);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 94, 46, 0);
+  }
 }
 
 .engagement-bottom {
@@ -724,9 +750,17 @@ ul {
   transform: scale(1);
 }
 
-.week-day:nth-child(1) .dot-fill { transition-delay: 0.3s; }
-.week-day:nth-child(2) .dot-fill { transition-delay: 0.42s; }
-.week-day:nth-child(5) .dot-fill { transition-delay: 0.54s; }
+.week-day:nth-child(1) .dot-fill {
+  transition-delay: 0.3s;
+}
+
+.week-day:nth-child(2) .dot-fill {
+  transition-delay: 0.42s;
+}
+
+.week-day:nth-child(5) .dot-fill {
+  transition-delay: 0.54s;
+}
 
 .output-label {
   display: block;
@@ -974,12 +1008,24 @@ ul {
 }
 
 @keyframes platformFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
-.col-lg-4:nth-child(2) .platform-icon-img { animation-delay: 0.5s; }
-.col-lg-4:nth-child(3) .platform-icon-img { animation-delay: 1s; }
+.col-lg-4:nth-child(2) .platform-icon-img {
+  animation-delay: 0.5s;
+}
+
+.col-lg-4:nth-child(3) .platform-icon-img {
+  animation-delay: 1s;
+}
 
 .platform-text {
   position: relative;
@@ -1013,15 +1059,13 @@ ul {
   right: 0;
   bottom: 0;
   height: 55%;
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(255, 94, 46, 0.14) 0px,
-    rgba(255, 94, 46, 0.14) 18px,
-    transparent 18px,
-    transparent 40px
-  );
-  -webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
-  mask-image: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+  background-image: repeating-linear-gradient(90deg,
+      rgba(255, 94, 46, 0.14) 0px,
+      rgba(255, 94, 46, 0.14) 18px,
+      transparent 18px,
+      transparent 40px);
+  -webkit-mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
   pointer-events: none;
 }
 
@@ -1752,15 +1796,13 @@ ul {
 .cta-bars {
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(255, 94, 46, 0.1) 0px,
-    rgba(255, 94, 46, 0.1) 18px,
-    transparent 18px,
-    transparent 40px
-  );
-  -webkit-mask-image: linear-gradient(90deg, transparent 30%, rgba(0,0,0,0.9) 100%);
-  mask-image: linear-gradient(90deg, transparent 30%, rgba(0,0,0,0.9) 100%);
+  background-image: repeating-linear-gradient(90deg,
+      rgba(255, 94, 46, 0.1) 0px,
+      rgba(255, 94, 46, 0.1) 18px,
+      transparent 18px,
+      transparent 40px);
+  -webkit-mask-image: linear-gradient(90deg, transparent 30%, rgba(0, 0, 0, 0.9) 100%);
+  mask-image: linear-gradient(90deg, transparent 30%, rgba(0, 0, 0, 0.9) 100%);
   pointer-events: none;
 }
 
@@ -1804,15 +1846,13 @@ ul {
   right: 0;
   bottom: 0;
   height: 70%;
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(255, 94, 46, 0.14) 0px,
-    rgba(255, 94, 46, 0.14) 18px,
-    transparent 18px,
-    transparent 40px
-  );
-  -webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
-  mask-image: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+  background-image: repeating-linear-gradient(90deg,
+      rgba(255, 94, 46, 0.14) 0px,
+      rgba(255, 94, 46, 0.14) 18px,
+      transparent 18px,
+      transparent 40px);
+  -webkit-mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
   pointer-events: none;
 }
 
@@ -1822,19 +1862,14 @@ ul {
 }
 
 .footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 19px;
-  text-decoration: none;
-  margin-bottom: 18px;
+  /* width: 19% !important; */
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
-.footer-brand i {
-  font-size: 24px;
-  color: var(--orange);
+.footer-brand img {
+  width: 100%;
 }
 
 .footer-text {
