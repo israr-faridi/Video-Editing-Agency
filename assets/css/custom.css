@@ -1192,7 +1192,14 @@ ul {
   overflow: hidden;
 }
 
-.result-card img {
+/* .result-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+} */
+.result-card video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1200,7 +1207,10 @@ ul {
   transition: transform 0.5s ease;
 }
 
-.result-card:hover img {
+/* .result-card:hover img {
+  transform: scale(1.05);
+} */
+.result-card:hover video {
   transform: scale(1.05);
 }
 
